@@ -6,6 +6,7 @@
 package com.jorge.bimestral;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
@@ -13,9 +14,11 @@ import javax.persistence.Id;
  * @author T-
  */
 @Entity
+//@Table(name="direccion")
 public class Direccion {
     
     @Id
+    @GeneratedValue
     private Long id;
     private Integer numero;
     private String calle;
