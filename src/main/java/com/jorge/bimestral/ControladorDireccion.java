@@ -35,4 +35,20 @@ public class ControladorDireccion {
      
         return repo.save(new Direccion(numero, calle, cp, municipio));
     }
+    //get
+    @RequestMapping(value="/direccion/{id}",
+            method=RequestMethod.GET, headers={"Accept=application/json"})
+    
+        public Direccion buscarId(@PathVariable Long id){
+                return repo.findOne(id);
+    }
+    //put
+ @RequestMapping(value="/direccion/{id}/{numero}/{calle}/{cp}/{municipio}",
+            method=RequestMethod.PUT, headers={"Accept=application/json"})
+    public Direccion actualizar (@PathVariable Long id,@PathVariable Integer numero,@PathVariable String calle,
+        @PathVariable Long cp, @PathVariable String municipio){
+     
+        return repo.save(new Direccion(id,numero,calle,cp,municipio));
 }
+ }
+
