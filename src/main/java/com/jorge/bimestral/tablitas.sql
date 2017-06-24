@@ -13,3 +13,6 @@ create table direccion(id integer primary key auto_increment,numero integer, cal
 drop table direccion;
 
 select * from direccion;
+create table SalaCine(id_sala integer primary key ,tituloPelicula varchar(80), clasificacion varchar(20), num_asientos integer);
+create table Boleto(id_boleto integer primary key auto_increment,id_sala integer  , CostoBoleto float,foreign key(id_sala) references SalaCine(id_sala));
+
