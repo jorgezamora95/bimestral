@@ -8,13 +8,14 @@ package com.jorge.bimestral;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  *
  * @author T-
  */
 @Entity
-//@Table(name="direccion")
+@Table(name="direccion")
 public class Direccion {
     
     @Id

@@ -19,7 +19,7 @@ import javax.persistence.Table;
 public class SalaCine {
     
     @Id
-    @Column(name="id_sal")
+    @Column(name="id_sala")
     private Long id;
     @Column(name="tituloPelicula")
     private String titulo;
