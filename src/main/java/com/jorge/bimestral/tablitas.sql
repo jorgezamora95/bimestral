@@ -21,3 +21,9 @@ create table Cliente(id_cliente integer primary key, nombre varchar(80), tarjeta
 create table Tarjetas(id_tarjetas integer primary key,id_cliente integer, tipo varchar(80), saldo float, fecha_corte date, foreign key(id_cliente) references Cliente(id_cliente));
 
 drop table Tarjetas;
+
+create table empleado(id_empelado integer primary key auto_increment, id_dep integer, nombre varchar(40), numero_seguro integer, 
+foreign key(id_dep) references departamento(id_dep));
+
+create table departamento(id_dep integer primary key auto_increment, nombre varchar(40));
+
